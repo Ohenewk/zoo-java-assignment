@@ -1,24 +1,23 @@
-package com.ing.zoo;
+package com.ing.zoo.animals;
+
+import com.ing.zoo.behaviours.Carnivore;
+import com.ing.zoo.behaviours.TrickPerformer;
 
 import java.util.Random;
 
-public class Tiger extends Animal implements Carnivore, TrickPerformer {
+public class Penguin extends Animal implements Carnivore, TrickPerformer {
     public String helloText;
     public String eatText;
     public String trick;
-
-    public Tiger() {
-    }
-
     @Override
     public void sayHello() {
-        helloText = "rraaarww";
+        helloText = "NOOT! NOOT!";
         System.out.println(helloText);
     }
 
     @Override
     public void eatMeat() {
-        eatText = "nomnomnom oink wubalubadubdub";
+        eatText = "swallow swallow FIIIISH";
         System.out.println(eatText);
     }
 
@@ -27,9 +26,9 @@ public class Tiger extends Animal implements Carnivore, TrickPerformer {
         Random random = new Random();
         int rnd = random.nextInt(2);
         if (rnd == 0) {
-            trick = "jumps in tree";
+            trick = "belly slide";
         } else {
-            trick = "scratches ears";
+            trick = "body slam";
         }
         System.out.println(trick);
     }

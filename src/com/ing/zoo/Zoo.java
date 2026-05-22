@@ -4,6 +4,9 @@ package com.ing.zoo;
  * Developed by Kingsley on 22/05/2026.
  */
 
+import com.ing.zoo.animals.*;
+import com.ing.zoo.behaviours.*;
+
 import java.util.Scanner;
 
 public class Zoo {
