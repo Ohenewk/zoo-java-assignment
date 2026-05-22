@@ -82,32 +82,28 @@ public class Zoo {
             }
             // Laat alle dieren die bladeren kunnen eten reageren.
         } else if (input.equals(commands[1])) {
-            System.out.print(dora.name + ": ");
-            dora.eatLeaves();
-            System.out.print(elsa.name + ": ");
-            elsa.eatLeaves();
-            System.out.print(marty.name + ": ");
-            marty.eatLeaves();
+            for (Animal animal : animals) {
+                if (animal instanceof Herbivore) {
+                    System.out.print(animal.name + ": ");
+                    ((Herbivore) animal).eatLeaves();
+                }
+            }
             // Laat alle dieren die vlees kunnen eten reageren.
         } else if (input.equals(commands[2])) {
-            System.out.print(dora.name + ": ");
-            dora.eatMeat();
-            System.out.print(henk.name + ": ");
-            henk.eatMeat();
-            System.out.print(wally.name + ": ");
-            wally.eatMeat();
-            System.out.print(rico.name + ": ");
-            rico.eatMeat();
-            System.out.print(jeff.name + ": ");
-            jeff.eatMeat();
+            for (Animal animal : animals) {
+                if (animal instanceof Carnivore) {
+                    System.out.print(animal.name + ": ");
+                    ((Carnivore) animal).eatMeat();
+                }
+            }
             // Laat alle dieren die een trucje kunnen doen reageren.
         } else if (input.equals(commands[3])) {
-            System.out.print(dora.name + ": ");
-            dora.performTrick();
-            System.out.print(wally.name + ": ");
-            wally.performTrick();
-            System.out.print(rico.name + ": ");
-            rico.performTrick();
+            for (Animal animal : animals) {
+                if (animal instanceof TrickPerformer) {
+                    System.out.print(animal.name + ": ");
+                    ((TrickPerformer) animal).performTrick();
+                }
+            }
         } else {
             System.out.println("Unknown command: " + input);
         }
