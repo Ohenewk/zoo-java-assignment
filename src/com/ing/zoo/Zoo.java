@@ -24,8 +24,12 @@ public class Zoo {
         wally.name = "wally";
         Zebra marty = new Zebra();
         marty.name = "marty";
+        Penguin rico = new Penguin();
+        rico.name = "rico";
+        TyrannosaurusRex jeff = new TyrannosaurusRex();
+        jeff.name = "jeff";
 
-        Animal[] animals = {henk, elsa, dora, wally, marty};
+        Animal[] animals = {henk, elsa, dora, wally, marty, rico, jeff};
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
@@ -64,6 +68,14 @@ public class Zoo {
                     System.out.print(marty.name + ": ");
                     marty.sayHello();
                     break;
+                case "rico":
+                    System.out.print(rico.name + ": ");
+                    rico.sayHello();
+                    break;
+                case "jeff":
+                    System.out.print(jeff.name + ": ");
+                    jeff.sayHello();
+                    break;
                 default:
                     System.out.println("Unknown animal: " + name);
                     break;
@@ -84,12 +96,18 @@ public class Zoo {
             henk.eatMeat();
             System.out.print(wally.name + ": ");
             wally.eatMeat();
+            System.out.print(rico.name + ": ");
+            rico.eatMeat();
+            System.out.print(jeff.name + ": ");
+            jeff.eatMeat();
             // Laat alle dieren die een trucje kunnen doen reageren.
         } else if (input.equals(commands[3])) {
             System.out.print(dora.name + ": ");
             dora.performTrick();
             System.out.print(wally.name + ": ");
             wally.performTrick();
+            System.out.print(rico.name + ": ");
+            rico.performTrick();
         } else {
             System.out.println("Unknown command: " + input);
         }
