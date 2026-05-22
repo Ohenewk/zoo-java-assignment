@@ -1,10 +1,13 @@
 package com.ing.zoo;
 
+/**
+ * Developed by Kingsley on 22/05/2026.
+ */
+
 import java.util.Scanner;
 
 public class Zoo {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         String[] commands = new String[4];
         commands[0] = "hello";
         commands[1] = "give leaves";
@@ -26,12 +29,20 @@ public class Zoo {
         System.out.print("Voer uw command in: ");
 
         String input = scanner.nextLine();
-        if(input.equals(commands[0] + " henk"))
-        {
+
+        // Alle dieren zeggen hallo, zodra commands 0 true is! Hun namen worden ook weergeven.
+        if (input.equals(commands[0])) {
+            System.out.print(henk.name + ": ");
             henk.sayHello();
-        }
-        else
-        {
+            System.out.print(elsa.name + ": ");
+            elsa.sayHello();
+            System.out.print(dora.name + ": ");
+            dora.sayHello();
+            System.out.print(wally.name + ": ");
+            wally.sayHello();
+            System.out.print(marty.name + ": ");
+            marty.sayHello();
+        } else {
             System.out.println("Unknown command: " + input);
         }
     }
