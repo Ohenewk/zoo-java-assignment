@@ -72,6 +72,14 @@ public class Zoo {
                     System.out.println("Unknown animal: " + name);
                     break;
             }
+            // Laat alle dieren die bladeren kunnen eten reageren.
+        } else if (input.equals(commands[1])) {
+            System.out.print(dora.name + ": ");
+            dora.eatLeaves();
+            System.out.print(elsa.name + ": ");
+            elsa.eatLeaves();
+            System.out.print(marty.name + ": ");
+            marty.eatLeaves();
         } else {
             System.out.println("Unknown command: " + input);
         }
