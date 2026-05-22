@@ -42,6 +42,36 @@ public class Zoo {
             wally.sayHello();
             System.out.print(marty.name + ": ");
             marty.sayHello();
+
+            // Laat alleen het opgegeven dier hallo zeggen.
+        } else if (input.startsWith("hello ")) {
+            String name = input.substring("hello ".length()).toLowerCase();
+            switch (name) {
+
+                case "henk":
+                    System.out.print(henk.name + ": ");
+                    henk.sayHello();
+                    break;
+                case "elsa":
+                    System.out.print(elsa.name + ": ");
+                    elsa.sayHello();
+                    break;
+                case "dora":
+                    System.out.print(dora.name + ": ");
+                    dora.sayHello();
+                    break;
+                case "wally":
+                    System.out.print(wally.name + ": ");
+                    wally.sayHello();
+                    break;
+                case "marty":
+                    System.out.print(marty.name + ": ");
+                    marty.sayHello();
+                    break;
+                default:
+                    System.out.println("Unknown animal: " + name);
+                    break;
+            }
         } else {
             System.out.println("Unknown command: " + input);
         }
