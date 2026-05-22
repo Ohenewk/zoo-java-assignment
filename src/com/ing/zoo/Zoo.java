@@ -80,6 +80,14 @@ public class Zoo {
             elsa.eatLeaves();
             System.out.print(marty.name + ": ");
             marty.eatLeaves();
+            // Laat alle dieren die vlees kunnen eten reageren.
+        } else if (input.equals(commands[2])) {
+            System.out.print(dora.name + ": ");
+            dora.eatMeat();
+            System.out.print(henk.name + ": ");
+            henk.eatMeat();
+            System.out.print(wally.name + ": ");
+            wally.eatMeat();
         } else {
             System.out.println("Unknown command: " + input);
         }
