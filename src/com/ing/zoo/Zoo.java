@@ -25,6 +25,8 @@ public class Zoo {
         Zebra marty = new Zebra();
         marty.name = "marty";
 
+        Animal[] animals = {henk, elsa, dora, wally, marty};
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
@@ -32,16 +34,10 @@ public class Zoo {
 
         // Alle dieren zeggen hallo, zodra commands 0 true is! Hun namen worden ook weergeven.
         if (input.equals(commands[0])) {
-            System.out.print(henk.name + ": ");
-            henk.sayHello();
-            System.out.print(elsa.name + ": ");
-            elsa.sayHello();
-            System.out.print(dora.name + ": ");
-            dora.sayHello();
-            System.out.print(wally.name + ": ");
-            wally.sayHello();
-            System.out.print(marty.name + ": ");
-            marty.sayHello();
+            for (Animal animal : animals) {
+                System.out.print(animal.name + ": ");
+                animal.sayHello();
+            }
 
             // Laat alleen het opgegeven dier hallo zeggen.
         } else if (input.startsWith("hello ")) {
