@@ -88,6 +88,12 @@ public class Zoo {
             henk.eatMeat();
             System.out.print(wally.name + ": ");
             wally.eatMeat();
+            // Laat alle dieren die een trucje kunnen doen reageren.
+        } else if (input.equals(commands[3])) {
+            System.out.print(dora.name + ": ");
+            dora.performTrick();
+            System.out.print(wally.name + ": ");
+            wally.performTrick();
         } else {
             System.out.println("Unknown command: " + input);
         }
